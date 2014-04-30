@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/popup.css" rel="stylesheet">
+  </head>
+  <body >
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+  	<div class="navbar-header">
+	    <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-transfer"></i> Glados Controls</a>
+		  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      	</button>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+        <li class="active"><a href="#">État</a></li>
+        <li><a href="#">Configuration</a></li>
+        <li class="divider"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Gestion actions ( <b>Serveur</b> -> <b>Client</b> )</a></li>
+            <li><a href="#">Gestion actions ( <b>Client</b> -> <b>Serveur</b> )</a></li>
+          </ul>
+        </li>
+      </ul>
+	</div>
+  </div>
+</nav>
+    <div class="container-fluid">
+    <h3><i class="glyphicon glyphicon-signal"></i> État des controls</h3>
+    
+      <select id="setPcId" class="form-control">
+        <option value="1">PC fixe</option>
+        <option value="2">PC portable</option>
+      </select>
+      <br />
+      <div class="input-group">
+        <input type="text" value="127.0.0.1" class="form-control" name="ip_serveur" id="ip_serveur" />
+        <span class="input-group-btn">
+          <input type="button" value="Modifier" id="edit_ip" disabled="disabled" class="btn btn-success" />
+        </span>
+      </div>
+      <br />
+  	  <div class="btn-group  btn-group-justified">
+  		  <a disabled="disabled" class="btn btn-default">Google Music</a>
+  		  <a class="btn btn-success">Online</a>
+  		</div>
+      <br />
+  		<div class="btn-group btn-group-justified">
+  		  <a disabled="disabled" class="btn btn-default">Youtube</a>
+  		  <a class="btn btn-danger">Offline</a>
+  		</div>
+  	<br />
+  		<div class="btn-group btn-group-justified">
+  		  <a disabled="disabled" class="btn btn-default">SoundCloud</a>
+  		  <a class="btn btn-danger">Offline</a>
+  		</div>
+	  </div>
+    <br /><br />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery.2.0.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controls_panel.js"></script>
+  </body>
+</html>

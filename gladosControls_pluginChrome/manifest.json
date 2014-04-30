@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Galdos Controls",
+  "description": "Système de connexion avec Sarah pour la communication vocal des sites internet.",
+  "version": "1.1",
+
+  "permissions": [
+    "https://play.google.com/music/*",
+    "storage"
+  ],
+  "content_scripts": [ {
+    "css": [ "css/x.css" ],
+    "js": [ "js/socket.io.js", "js/jquery.2.0.0.js", "js/controls.js" ],
+    "matches": [ "https://play.google.com/music/*" ],
+    "run_at": "document_end"
+  } ],
+  "icons": { 
+    "16": "logo/16.png",
+    "48": "logo/48.png",
+    "128": "logo/128.png" 
+  },
+  "browser_action": {
+    "default_icon": "logo/48.png",
+    "default_popup": "popup.html"
+  }
+}
