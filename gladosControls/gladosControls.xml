@@ -1,0 +1,80 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulecroming" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulecroming" scope="public">
+    <example>Gervis, lance teso</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item>Glados</item>
+
+    <one-of>
+			 <item> google musique sur mon pc portable
+        <tag>
+          out.action._attributes.tts = "Oui monsieur preparation du pc portable pour google musique";
+          out.action.constrols = "pc_2";
+        </tag>
+      </item>
+
+      <item> google musique sur mon pc fixe
+        <tag>
+          out.action._attributes.tts = "Oui monsieur de votre ordinateur pour google musique";
+          out.action.constrols = "pc_1";
+        </tag>
+      </item>
+
+      
+      <item> prepare google musique
+        <ruleref special="GARBAGE" />
+        <tag>
+          out.action._attributes.tts = "Oui monsieur preparation de l'écoute de google musique";
+          out.action.constrols = "init";
+        </tag>
+      </item>
+
+     	<item> music start
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="play_pause";
+        </tag>
+      </item>
+      
+      <item> music play
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="play_pause";
+        </tag>
+      </item>
+      
+			<item> music pause
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="play_pause";
+        </tag>
+      </item>
+      
+      <item> music suivant
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="next";
+        </tag>
+      </item>
+      <item> music precedente
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="rewind";
+        </tag>
+      </item>
+      <item> music j'ai de la chance
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="chance";
+        </tag>
+      </item>
+      <item> j'aime la musique
+        <tag>
+          out.action._attributes.tts = "Oui"; 
+          out.action.constrols="jaime";
+        </tag>
+      </item>
+    </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/gladosControls";</tag>
+  </rule> 
+</grammar>

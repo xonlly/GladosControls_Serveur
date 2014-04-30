@@ -1,0 +1,8 @@
+{
+  "modules" : { 
+    "gladosControls"  : {
+      "description": "Glados Controls",
+      "version"    : "1.0"
+    }
+  }
+}
